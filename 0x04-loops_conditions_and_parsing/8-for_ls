@@ -1,3 +1,2 @@
- #!/usr/bin/env bash
-# This script lists non-hidden files with name after first dash
-for file in ; do if [[ "$file" != *- ]]; then echo "$file"; else echo "${file#*-}"; fi; done
+echo -e '#!/usr/bin/env bash\n# This script lists non-hidden files with name after first dash\nfor file in ; do if [[ "$file" != - ]]; then echo "$file"; else echo "${file#-}"; fi; done' > 8-for_ls
+chmod +x 8-for_ls
